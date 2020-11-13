@@ -3,24 +3,24 @@ pipeline {
     stages {
         stage('Build Stage') {
             steps {
-                echo "Hello World"
-                echo "***Build Stage***"
+                sh 'echo "Hello World"'
+                sh 'echo "***Build Stage***"'
 
                 withMaven(maven : 'maven_4_0_0') {
-                    mvn clean compile
+                    sh 'mvn clean compile'
             }
         }
         }
 
         stage('Test Stage') {
             steps {
-                echo "Test Stage"
+                sh 'echo "Test Stage"'
              }
         }
 
         stage('Deploy Stage') {
             steps {
-                echo "Deploy Stage"
+                sh 'echo "Deploy Stage"'
              }
         }
 
