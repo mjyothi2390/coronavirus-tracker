@@ -10,6 +10,7 @@ pipeline {
                     sh 'mvn clean compile'
             }
         }
+        }
 
         stage('Test Stage') {
             steps {
@@ -22,5 +23,6 @@ pipeline {
                 sh 'echo "Deploy Stage"'
              }
         }
+
     }
 }
