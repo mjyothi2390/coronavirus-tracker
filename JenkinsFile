@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'echo "Hello World"'
                 sh 'echo "***Build Stage***"'
-                sh 'mvn version'
+                sh 'mvn clean'
             }
         }
 
